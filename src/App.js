@@ -25,7 +25,7 @@ function App() {
       <aside className="sidebar">
         <h3>Shopping Categories</h3>
         <button className="sidebar-close-button" onClick={closeMenu}>
-          x
+          &#10006;
         </button>
         <ul>
           <li>

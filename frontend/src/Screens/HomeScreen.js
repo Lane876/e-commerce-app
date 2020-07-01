@@ -1,18 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { data } from "../data";
+// import data from "../data";
+import axios from "axios";
 
-const Home = () => {
+const HomeScreen = () => {
+  const [products, setProducts] = React.useState([]);
+
+  React.useEffect(() => {
+    const fetchData = async () => {
+      const { data } = await axios.get("/api/products");
+      setProducts(data);
+    };
+
+    fetchData();
+
+    return () => {};
+  }, []);
+
   return (
     <ul className="products">
-      {data.map((product, i) => (
+      {products.map((product, i) => (
         <li key={i}>
           <div className="product">
-            <Link to={"/products/" + product.id}>
+            <Link to={"/products/" + product._id}>
               <img className="product-image" src={product.image} alt="cover" />
             </Link>
             <div className="product-name">
-              <Link to={"/products/" + product.id}>{product.name}</Link>
+              <Link to={"/products/" + product._id}>{product.name}</Link>
             </div>
             <div className="product-brand">{product.brand}</div>
             <div className="product-price">{product.price}</div>
@@ -26,4 +40,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomeScreen;

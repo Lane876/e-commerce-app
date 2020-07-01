@@ -1,12 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { data } from "../data";
+import data from "../data";
 
-const Products = (props) => {
+const ProductScreen = (props) => {
   const propId = props.match.params.id;
   const num = Number(propId);
 
-  const product = data.find((product) => product.id === num);
+  console.log(num);
+
+  const product = data.products.find((product) => product._id === num);
+  console.log(product);
   return (
     <div>
       <div className="back-to-result">
@@ -57,4 +60,4 @@ const Products = (props) => {
   );
 };
 
-export default Products;
+export default ProductScreen;

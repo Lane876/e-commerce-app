@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
-import Home from "./components/Home";
-import Products from "./components/Products";
+import HomeScreen from "./Screens/HomeScreen";
+import ProductScreen from "./Screens/ProductScreen";
 
 function App() {
   function openMenu() {
@@ -42,8 +42,8 @@ function App() {
         <main className="main">
           <div className="content">
             <Switch>
-              <Route exact path="/" component={Home} />
-              <Route path="/products/:id" component={Products} />
+              <Route exact path="/" component={HomeScreen} />
+              <Route path="/products/:id" component={ProductScreen} />
             </Switch>
           </div>
         </main>

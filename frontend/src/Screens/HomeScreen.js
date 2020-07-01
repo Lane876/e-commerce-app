@@ -2,22 +2,25 @@ import React from "react";
 import { Link } from "react-router-dom";
 // import data from "../data";
 import axios from "axios";
+import { useSelector, useDispatch } from "react-redux";
+import { listProducts } from "../actions/productActions";
 
 const HomeScreen = () => {
-  const [products, setProducts] = React.useState([]);
+  const productList = useSelector((state) => state.productList);
+  const { products, loading, error } = productList;
+  const dispatch = useDispatch();
 
   React.useEffect(() => {
-    const fetchData = async () => {
-      const { data } = await axios.get("/api/products");
-      setProducts(data);
-    };
-
-    fetchData();
+    dispatch(listProducts());
 
     return () => {};
   }, []);
 
-  return (
+  return loading ? (
+    <div>Loading...</div>
+  ) : error ? (
+    <div>{error}</div>
+  ) : (
     <ul className="products">
       {products.map((product, i) => (
         <li key={i}>

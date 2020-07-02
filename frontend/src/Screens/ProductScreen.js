@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import data from "../data";
+// import data from "../data";
 import { useSelector, useDispatch } from "react-redux";
 import { detailsProduct } from "../actions/productActions";
 
@@ -19,7 +19,6 @@ const ProductScreen = (props) => {
 
   React.useEffect(() => {
     dispatch(detailsProduct(props.match.params.id));
-    console.log(props.match.params.id);
   }, []);
 
   function handleAddCart() {

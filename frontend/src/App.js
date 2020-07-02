@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
+import CartScreen from "./screens/CartScreen";
 
 function App() {
   function openMenu() {
@@ -43,6 +44,7 @@ function App() {
           <div className="content">
             <Switch>
               <Route exact path="/" component={HomeScreen} />
+              <Route path="/cart/:id?" component={CartScreen} />
               <Route path="/products/:id" component={ProductScreen} />
             </Switch>
           </div>

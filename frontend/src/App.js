@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
 import CartScreen from "./screens/CartScreen";
+import SigninScreen from "./screens/SigninScreen";
 
 function App() {
   function openMenu() {
@@ -23,7 +24,7 @@ function App() {
           </div>
           <div className="header-links">
             <a href="cart.html">Cart</a>
-            <a href="signin.html">Sign In</a>
+            <Link to="/signin">Sign In</Link>
           </div>
         </header>
         <aside className="sidebar">
@@ -44,6 +45,7 @@ function App() {
           <div className="content">
             <Switch>
               <Route exact path="/" component={HomeScreen} />
+              <Route path="/signin" component={SigninScreen} />
               <Route path="/cart/:id?" component={CartScreen} />
               <Route path="/products/:id" component={ProductScreen} />
             </Switch>

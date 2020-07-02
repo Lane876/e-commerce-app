@@ -6,6 +6,7 @@ import {
 import { cartReducer } from "./reducer/cartReducers";
 import thunk from "redux-thunk";
 import Cookie from "js-cookie";
+import { userSigninReducer } from "./reducer/userReducers";
 
 const cartItems = Cookie.getJSON("cartItems" || []);
 
@@ -15,6 +16,7 @@ const reducer = combineReducers({
   productList: productListReducer,
   productDetails: productDetailsReducer,
   cart: cartReducer,
+  userSignin: userSigninReducer,
 });
 
 const store = createStore(

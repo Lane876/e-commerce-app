@@ -3,7 +3,7 @@ export default {
     {
       _id: 1,
       name: "Shirt",
-      categorie: "Shirt",
+      category: "Shirt",
       brand: "Reebok",
       image: "/images/shirt.jpg",
       rating: 10,
@@ -14,7 +14,7 @@ export default {
     {
       _id: 2,
       name: "Tight Pants",
-      categorie: "Pants",
+      category: "Pants",
       brand: "Nike",
       image: "/images/pants.jpg",
       rating: 5,
@@ -25,7 +25,7 @@ export default {
     {
       _id: 3,
       name: "Slim Pants",
-      categorie: "Shirt",
+      category: "Shirt",
       brand: "Nike",
       image: "/images/pants.jpg",
       rating: 5,
@@ -36,7 +36,7 @@ export default {
     {
       _id: 4,
       name: "Pants",
-      categorie: "Pants",
+      category: "Pants",
       brand: "Nike",
       image: "/images/pants.jpg",
       rating: 5,
@@ -47,7 +47,7 @@ export default {
     {
       _id: 5,
       name: "Pants",
-      categorie: "Pants",
+      category: "Pants",
       brand: "Nike",
       image: "/images/shirt.jpg",
       rating: 5,
@@ -58,7 +58,7 @@ export default {
     {
       _id: 6,
       name: "Pants",
-      categorie: "Pants",
+      category: "Pants",
       brand: "Nike",
       image: "/images/shirt.jpg",
       rating: 5,

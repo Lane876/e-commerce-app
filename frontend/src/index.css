@@ -45,6 +45,7 @@ button {
 .header-links a {
   color: #ffffff;
   text-decoration: none;
+  padding: 1rem;
 }
 
 .header-links a:hover {

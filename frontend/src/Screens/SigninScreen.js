@@ -8,6 +8,7 @@ const SigninScreen = (props) => {
   const [password, setPassword] = React.useState("");
   const userSignin = useSelector((state) => state.userSignin);
   const { loading, userInfo, error } = userSignin;
+  console.log(userSignin);
   const dispatch = useDispatch();
 
   React.useEffect(() => {

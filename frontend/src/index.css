@@ -162,10 +162,10 @@ a:hover {
 }
 
 .details-image {
-  flex: 2 1 60rem;
+  flex: 1 1 50rem;
 }
 .details-image img {
-  width: 60rem;
+  width: 40rem;
   height: 100%;
 }
 .details-info {
@@ -303,4 +303,27 @@ input {
   padding: 1rem;
   border: 0.1rem solid #c0c0c0;
   border-radius: 0.5rem;
+}
+
+/* Products */
+
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.content-margined {
+  margin: 1rem;
+}
+.table {
+  width: 100%;
+}
+
+th {
+  text-align: left;
+}
+
+tbody > tr:nth-child(odd) {
+  background-color: #f0f0f0;
 }

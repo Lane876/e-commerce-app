@@ -11,7 +11,6 @@ import ProductsScreen from "./screens/ProductsScreen";
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
-  console.log(userInfo);
 
   function openMenu() {
     document.querySelector(".sidebar").classList.add("open");
@@ -60,7 +59,7 @@ function App() {
               <Route path="/signin" component={SigninScreen} />
               <Route path="/register" component={RegisterScreen} />
               <Route path="/cart/:id?" component={CartScreen} />
-              <Route path="/products/:id" component={ProductScreen} />
+              <Route path="/product/:id" component={ProductScreen} />
             </Switch>
           </div>
         </main>

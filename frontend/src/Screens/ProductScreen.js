@@ -1,17 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import data from "../data";
 import { useSelector, useDispatch } from "react-redux";
 import { detailsProduct } from "../actions/productActions";
 
 const ProductScreen = (props) => {
-  // const propId = props.match.params.id;
-  // const num = Number(propId);
-
-  // console.log(num);
-
-  // const product = data.products.find((product) => product._id === num);
-  // console.log(product);
   const [qty, setQty] = React.useState(1);
   const productDetails = useSelector((state) => state.productDetails);
   const { product, loading, error } = productDetails;
@@ -77,7 +69,7 @@ const ProductScreen = (props) => {
               )}
               <li>
                 {product.countInStock > 0 && (
-                  <button onClick={handleAddCart} className="button">
+                  <button onClick={handleAddCart} className="button primary">
                     Add to cart
                   </button>
                 )}
